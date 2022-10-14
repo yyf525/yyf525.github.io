@@ -87,7 +87,7 @@ $$
 
 即求出多个不等式链的**最小值**： $X_i\le X_j+c_1\le X_k+c_1+c_2\le\cdots\le X_0+c_1+c_2+\cdots c_p$。
 
-及最后形成：$\begin{cases}X_i\le P_1\\X_i\le P_2\\X_i\le P_3\\~~~~~~~\vdots\\ X_i\le P_t\end{cases}$，即 $X_i$ 的上界是 $min(P_1,P_2,P_3,\cdots,P_t)$，因为是取 $\min$，所以用**最短路**。
+最后形成 $X_i\le P_1,X_i\le P_2,\cdots,X_i\le P_t$，即 $X_i$ 的上界是 $min(P_1,P_2,P_3,\cdots,P_t)$，因为是取 $\min$，所以用**最短路**。
 
 #### 最小值
 
@@ -124,7 +124,7 @@ $$
 $$
 
 $$
-若未出现以上两种情况，则次差分约束有解。(5)
+若未出现以上两种情况，则此差分约束有解。(5)
 $$
 
 $$
