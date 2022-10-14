@@ -1,4 +1,3 @@
-# yyf525.github.io
-$yyf$
+# wxuyuan.github.io
 
-一个逊逼的小破站。。。
+This is wangxuyuan's main github page. I will add many things to it so welcome forking my project!
