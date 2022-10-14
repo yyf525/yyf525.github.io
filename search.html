@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Search</title>
+    <link rel="stylesheet" href="/src/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/src/css/pagecss.css" />
+  </head>
+  <body class="bg-info">
+    <div id="main">
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container">
+          <ul class="navbar-nav">
+            <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blogs">Blog</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" action="/search" method="get">
+            <div class="input-group">
+              <input type="text" placeholder="Search" class="form-control" name="value" />
+              <div class="input-group-text">
+                <button class="btn btn-sm" type="submit">🔍</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </nav>
+      <div class="container">
+        <div style="transform: translateY(32vh);">
+          <h2 class="text-center">Search your fuck!</h2>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark text-white-50" id="footer">
+      <div class="list-unstyled list-inline text-center" style="height: 100%;">
+        Contact me:&nbsp;&nbsp;&nbsp;&nbsp;
+        <a title="luogu" href="https://www.luogu.com.cn/user/410729"><img src="/src/img/luogu.ico" width="25px" /></a>
+        &nbsp;
+        <a title="codeforces" href="http://codeforces.com/profile/wxy2010"><img src="/src/img/codeforces.png" width="25px" /></a>
+        &nbsp;
+        <a title="163-mail" href="mailto: wangxuyuan0812&163.com" class="text-dark" style="width: 30px;"><span style="text-decoration: none; font-size: 25px;">📧</span></a>
+      </div>
+    </footer>
+    <script src="/src/js/jquery.min.js"></script>
+    <script src="/src/js/bootstrap.min.js"></script>
+  </body>
+</html>
