@@ -1,5 +1,5 @@
 {
-    "solutionCount": 3,
+    "solutionCount": 1,
     "solutionTags": [
         "二分", "三分", "图论", "数学"
     ],
@@ -13,23 +13,6 @@
                 "系统"
             ],
             "tags": []
-        },        {
-            "title": "差分约束系统",
-            "classes": [
-                "专题"
-            ],
-            "tags": [
-                "图论"
-            ]
-        },
-        {
-            "title": "欧拉路径",
-            "classes": [
-                "专题"
-            ],
-            "tags": [
-                "图论"
-            ]
         }
     ]
 }
