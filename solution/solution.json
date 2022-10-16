@@ -8,11 +8,13 @@
     ],
     "solutions": [
         {
-            "title": "小站更新日志",
+            "title": "CF568A Primes or Palindromes",
             "classes": [
-                "系统"
+                题解"
             ],
-            "tags": []
+            "tags": [
+                "数学"
+            ]
         },
         {
             "title": "P5766 最优联通子集",
