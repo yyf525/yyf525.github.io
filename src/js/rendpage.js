@@ -124,6 +124,66 @@ function rendBlogs(ini) {
     })
   }
 }
+function getSolutions() {
+  $.ajax({
+    method: "get",
+    url: "/solution/solution.json",
+    success: function(data) {
+      console.log("SolutionsData", data);
+      rendSolutions(data);
+    },
+    error: function() {
+      alert("请检查网络");
+      getSolutions();
+    }
+  });
+}
+function getSolution(id, lastData = {}, getWhat = "ini") {
+  if (getWhat === "ini") {
+    $.ajax({
+      method: "get",
+      url: "/solution/" + id + "/ini.json",
+      success: function(data) {
+        console.log("Solution %d ini", id, data);
+        getSolution(id, data, "content");
+      },
+      error: function() {
+        alert("请检查网络");
+        getSolution(id, data, "ini");
+      }
+    });
+  } else {
+    $.ajax({
+      method: "get",
+      url: "/solution/" + id + "/content.md",
+      success: function(data) {
+        console.log("Solution %d content", id, data);
+        rendArtical(lastData, data);
+      },
+      error: function() {
+        alert("请检查网络");
+        getSolution(id, data, "content");
+      }
+    });
+  }
+}
+function rendSolutions(ini) {
+  for (let solutionId in ini.solutions) {
+    let solution = ini.solutions[solutionId];
+    $(".solutions-table tbody").each(function() {
+      let str = "<tr><td><button class=\"btn btn-small\" onclick=\"location.href='/solution/?id=" + solutionId + "'\">" + solution.title + "</button></td><td>";
+      for (id in solution.tags) {
+        str = str + "<kbd>" + solution.tags[id] + "</kbd>&nbsp;";
+      }
+      str = str + "</td><td>";
+      for (id in solution.classes) {
+        str = str + "<kbd>" + solution.classes[id] + "</kbd>&nbsp;";
+      }
+      str = str + "</td>";
+      $(this).append(str);
+    })
+  }
+}
 function rendArtical(ini, artical) {
   $("head title").each(function() {
     let str = $(this).text();
