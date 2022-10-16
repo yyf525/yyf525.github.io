@@ -1,12 +1,12 @@
 {
-    "blogCount": 4,
-    "blogTags": [
+    "solutionCount": 4,
+    "solutionTags": [
         "二分", "三分", "图论", "数学"
     ],
-    "blogClasses": [
+    "solutionClasses": [
         "题解", "系统", "专题"
     ],
-    "blogs": [
+    "solutions": [
         {
             "title": "小站更新日志",
             "classes": [
