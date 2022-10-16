@@ -53,7 +53,13 @@
 
 所以我么就可以得出我们的算法：
 
-$f(\frac{A}{B})=\begin{cases}B=0~~~~ ~~0\\A≥B~~~ \left \lfloor \frac{A}{B} \right  \rfloor+f(\frac{A\bmod B}{B}) \\A<B~~~~ f(\frac{B}{A})\end{cases}$
+当我们要计算 $f(\frac{A}{B})$ ,则有以下几种情况:
+
+$1.B=0$ 时, $f(\frac{A}{B})=0$
+
+$2.A≥B$ 时, $f(\frac{A}{B})=\left \lfloor \frac{A}{B} \right  \rfloor+f(\frac{A\bmod B}{B})$
+
+$3.A<B$ 时, $f(\frac{A}{B})=f(\frac{B}{A})$
 
 容易看出这是一个递归，即可实现。
 
