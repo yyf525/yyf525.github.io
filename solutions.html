@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="/src/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/src/css/pagecss.css" />
+  </head>
+  <body>
+    <div id="main">
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container">
+          <ul class="navbar-nav">
+            <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blogs">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="/solutions">Solution</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <div style="transform: translateY(7vh);">
+          <h2 class="text-center">My Blog</h2>
+          <br /><br />
+          <table class="table table-hover blogs-table">
+            <thead><tr>
+              <th>名称</th>
+              <th>标签</th>
+              <th>分类</th> 
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark text-white-50" id="footer">
+      <div class="list-unstyled list-inline text-center" style="height: 100%;">
+        Contact me:&nbsp;&nbsp;&nbsp;&nbsp;
+        <a title="luogu" href="https://www.luogu.com.cn/user/541916"><img src="/src/img/luogu.ico" width="25px" /></a>
+        &nbsp;
+        <a title="codeforces" href="http://codeforces.com/profile/yaoyanfeng"><img src="/src/img/codeforces.png" width="25px" /></a>
+        &nbsp;
+	<a title="163-mail" href="mailto: yaoyanfeng1215@163.com"><img src="/src/img/mail.jpg" width="25px" /></a>
+	&nbsp;
+	<a title="github" href="https://github.com/yyf525"><img src="/src/img/github.png" width="30px" /></a>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	Powered by <a href="https://github.com/wxuyuan/wxuyuan.github.io">wxuyuan</a>, Modified by <a href="https://github.com/yyf525">yyf525</a>.
+      </div>
+    </footer>
+    <script src="/src/js/jquery.min.js"></script>
+    <script src="/src/js/bootstrap.min.js"></script>
+    <script src="src/js/rendpage.js"></script>
+    <script src="/src/js/flower.js"></script>
+    <script>getBlogs();</script>
+  </body>
+</html>
