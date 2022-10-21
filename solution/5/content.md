@@ -75,67 +75,100 @@ $2$、将这个结果看作一个 $10$ 进制数的时候，值不能小于 $l$ 
 # 代码
 
 ```cpp
-#include <bits/stdc++.h>
-#define int long long
-#define double long double
+#include<bits/stdc++.h>
 using namespace std;
-typedef unsigned long long ull;
-int a[1000];
-const double ONE = (double)1.0;
-signed main() {
-	int t, y, l;
-	scanf("%lld", &t);
-	for (int _ = 1; _ <= t; _++) {
-		scanf("%lld%lld", &y, &l);
-		int ans = 10;
-		for (int i = l; i < 100; i++) {
-			int a = i / 10, b = i % 10;
-			double x = (ONE * y - b) / a;
-			int ix = (int)x;
-			if (a * ix + b == y) {
-				ans = max(ans, ix);
-			}
-			if (a * (ix + 1) + b == y) {
-				ans = max(ans, ix + 1);
-			}
-		}
-		for (int i = max(l, 100ll); i < 1000; i++) {
-			int a = i / 100, b = i / 10 % 10, c = i % 10;
-			c = c - y;
-			double x1 = ONE * (-ONE * b + sqrt(b * b - (4 * ONE) * a * c)) / a / (2 * ONE);
-			double x2 = ONE * (-ONE * b - sqrt(b * b - (4 * ONE) * a * c)) / a / (2 * ONE);
-			int ix = (int)x1;
-			for (int k = ix - 20; k <= ix + 20; k++) {
-				if (a * k * k + b * k + c == 0) {
-					ans = max(ans, k);
-				}
-			}
-			ix = (int)x2;
-			for (int k = ix - 20; k <= ix + 20; k++) {
-				if (a * k * k + b * k + c == 0) {
-					ans = max(ans, k);
-				}
-			}
-		}
-		for (int i = 11; i <= 1000000; i++) {
-			bool flag = 1;
-			int tt = y;
-			int k = 0, kk = 0;
-			while (tt) {
-				flag &= ((tt % i) < 10);
-				a[++k] = tt % i;
-				tt /= i;
-			}
-			for (int i = k; i >= 1; i--) {
-				kk = kk * 10 + a[i];
-			}
-			if (flag && kk >= l) {
-				ans = max(ans, i);
-			}
-		}
-		printf("%lld\n", ans);
+#define int long long
+#define Int __int128
+inline int read();
+int T;
+int y,l;
+int cc[1377];
+int cct;
+int ans;
+inline void zhuan(int x){
+	cct=0;
+	int p=y;
+	while(p){
+		cc[++cct]=p%x;
+		p/=x;
 	}
+	for(register int i=1;i<=cct/2;++i)
+		swap(cc[i],cc[cct-i+1]);
+	return;
 }
+inline bool check(){
+	for(register int i=1;i<=cct;++i){
+		if(cc[i]>9)
+			return false;
+	}
+	return true;
+}
+inline bool cmp(){
+	int ans=0;
+	for(register int i=1;i<=cct;++i)
+		ans=ans*10+cc[i];
+	if(ans>=l)
+		return true;
+	else
+		return false;
+}
+__int128 Sqrt(Int x){
+	Int L=1,R=1000000000000000;
+	while(L<R){
+		Int mid=(L+R)/2;
+		if(mid*mid<x)
+			L=mid+1;
+		else
+			R=mid;
+	}
+	for(Int i=L-5;i<=L+5;++i)
+		if(i*i<=x&&(i+1)*(i+1)>x)
+			return i;
+	return -1;
+}
+signed main(){
+	freopen("age.in","r",stdin);
+	freopen("age.out","w",stdout);
+	T=read();
+	while(T--){
+		ans=0,y=read(),l=read();
+		for(register int i=max(l,10ll);i<=99;++i){
+			int a=i/10,b=i%10;
+			if((y-b)%a==0)ans=max(ans,(y-b)/a);
+		}
+		for(register int i=max(l,100ll);i<=999;++i){
+			Int a=i/100,b=i/10%10,c=i%10-y,nick=b*b-4*a*c;
+			if(nick<0)continue;
+			nick=Sqrt(nick);
+			Int p1=(-b+nick)/(a*2),p2=(-b-nick)/(a*2);
+			for(int pp=1;pp<=2;pp++)
+			{
+				Int L=p1-20,R=p1+20;
+				if(L<10)L=10;
+				for(Int xp=L;xp<=R;++xp){
+					Int sum=a*xp*xp+b*xp+c;
+					if(sum==0){
+						if(xp>ans)ans=xp;
+						break;
+					}
+				}
+				swap(p1,p2);
+			}
+		}
+		for(register int i=1e6;i>=10;--i){
+			if(i<ans)break;
+			zhuan(i);
+			if(!check())continue;
+			if(cmp()){
+				ans=max(ans,i);
+				break;
+			}
+		}
+		printf("%llu\n",ans);
+	}
+	return 0;
+}
+inline int read(){int x=0,f=1;char ch=getchar();while(ch<'0'||ch>'9'){if(ch=='-')f=-1;ch=getchar();}while(ch>='0'&&ch<='9'){x=(x<<1)+(x<<3)+(ch^48);ch=getchar();}return x*f;}
 ```
 
 [about me](https://www.github.com/yyf525)
