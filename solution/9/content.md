@@ -1,5 +1,3 @@
-# CSP2019 普及组复赛讲解
-
 ## A：数字游戏
 
 [题目链接](https://www.luogu.com.cn/problem/P5660)
