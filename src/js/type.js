@@ -1,7 +1,7 @@
 (function () {
     var a_idx = 0;
     window.onclick = function (event) {
-        var a = new Array("❤", "yyf太菜了！", "%% hank0402", "%% thomaswmy", "%% wxy2010", "%% hexu2010", "喷喷lzydog");
+        var a = new Array("❤", "yyf太逊了！", "%% hank0402", "%% thomaswmy", "%% wxy2010", "%% hexu2010", "%% YWZ");
 
         var heart = document.createElement("b"); //创建b元素
         heart.onselectstart = new Function('event.returnValue=false'); //防止拖动
