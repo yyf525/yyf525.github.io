@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <title>Solution</title>
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/src/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/src/css/pagecss1.css" />
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
+    <link rel="stylesheet" href="https://cdn.w3cbus.com/library/mdui/1.0.2/css/mdui.min.css"/>
   </head>
-  <body>
+  <body class="mdui-bottom-nav-fixed">
     <div id="main">
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container">
@@ -26,17 +29,37 @@
             <thead><tr>
               <th>名称</th>
               <th>标签</th>
-              <th>分类</th> 
+              <th>分类</th>
             </tr></thead>
             <tbody></tbody>
           </table>
         </div>
       </div>
     </div>
+    <div class="mdui-bottom-nav mdui-bottom-nav-text-auto mdui-bottom-nav-scroll-hide mdui-color-indigo">
+      <a href="/" class="mdui-ripple mdui-ripple-white">
+       <i class="mdui-icon material-icons">live_tv</i>
+        <label>Home</label>
+      </a>
+      <a href="/blogs" class="mdui-ripple mdui-ripple-white">
+        <i class="mdui-icon material-icons">music_note</i>
+        <label>Blog</label>
+      </a>
+      <a href="/solutions" class="mdui-ripple mdui-ripple-white mdui-bottom-nav-active">
+        <i class="mdui-icon material-icons">book</i>
+        <label>Solution</label>
+      </a>
+      <a href="/files" class="mdui-ripple mdui-ripple-white">
+        <i class="mdui-icon material-icons">library_books</i>
+        <label>File</label>
+      </a>
+    </div>
     <script src="/src/js/jquery.min.js"></script>
     <script src="/src/js/bootstrap.min.js"></script>
     <script src="src/js/rendpage.js"></script>
     <script src="/src/js/flower.js"></script>
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    <script src="https://cdn.w3cbus.com/library/mdui/1.0.2/js/mdui.min.js"></script>
     <script>getSolutions();</script>
   </body>
 </html>
