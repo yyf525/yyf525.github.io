@@ -72,4 +72,4 @@ printf("%d\n",ans);
 
 为了让更多的 $l$ 满足，我们最好要使 $x$ 最小，自己推一下可以发现，我们只要保留最小的奇数距离和最小的偶数距离即可。
 
-[about me](www.github.com/yyf525)
+[about me](https://www.github.com/yyf525)
