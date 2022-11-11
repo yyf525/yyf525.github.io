@@ -1,91 +1,71 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>底部导航栏 - 背景色</title>
-  <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
-  <link rel="stylesheet" href="https://cdn.w3cbus.com/library/mdui/1.0.2/css/mdui.min.css"/>
-</head>
-<body class="mdui-bottom-nav-fixed">
-
-  <div class="mdui-bottom-nav mdui-bottom-nav-text-auto mdui-bottom-nav-scroll-hide mdui-color-indigo">
-    <a href="javascript:void(0);" class="mdui-ripple mdui-ripple-white mdui-bottom-nav-active">
-      <i class="mdui-icon material-icons">live_tv</i>
-      <label>Movies</label>
-    </a>
-    <a href="javascript:void(0);" class="mdui-ripple mdui-ripple-white">
-      <i class="mdui-icon material-icons">music_note</i>
-      <label>Music</label>
-    </a>
-    <a href="javascript:void(0);" class="mdui-ripple mdui-ripple-white">
-      <i class="mdui-icon material-icons">book</i>
-      <label>Books</label>
-    </a>
-    <a href="javascript:void(0);" class="mdui-ripple mdui-ripple-white">
-      <i class="mdui-icon material-icons">library_books</i>
-      <label>Newsstand</label>
-    </a>
-  </div>
-
-  <div class="mdui-container">
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-  </div>
-  <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
-  <script src="https://cdn.w3cbus.com/library/mdui/1.0.2/js/mdui.min.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.w3cbus.com/library/mdui/1.0.2/css/mdui.min.css"/>
+    <link rel="stylesheet" href="/src/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/src/css/pagecss.css" />
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
+  </head>
+  <body class="mdui-bottom-nav-fixed mdui-color-indigo-300">
+    <div id="main" class="mdui-typo">
+    	<h2>声明</h2>
+		    <span>此网站由</span>
+			<a href="https://github.com/wxuyuan">wxy</a>
+			<span>和</span>
+			<a href="https://www.mdui.org">mdui</a>
+			<span>提供主体代码，在此表示热烈感谢。</span>
+		<h2>联系方式</h2>
+			<span>洛谷(luogu):</span>
+			<a class="mdui-btn mdui-btn-icon" href="https://www.luogu.com.cn/user/541916" mdui-tooltip="{content:'luogu'}">
+				<img src="/src/img/luogu.ico" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="20px" height="20px">
+			</a>
+			<div></div>
+			<span>Codeforces:</span>
+			<a class="mdui-btn mdui-btn-icon" href="http://codeforces.com/profile/yaoyanfeng" mdui-tooltip="{content:'CodeForces'}">
+				<img src="/src/img/codeforces.png" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="20px" height="20px">
+			</a>
+			<div></div>
+			<span>Email(163):</span>
+			<a class="mdui-btn mdui-btn-icon" href="mailto: yaoyanfeng1215@163.com" mdui-tooltip="{content:'Email'}">
+				<img src="/src/img/mail.jpg" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="20px" height="20px">
+			</a>
+			<div></div>
+			<span>Github:</span>
+			<a class="mdui-btn mdui-btn-icon" href="https://github.com/yyf525" mdui-tooltip="{content:'Github'}">
+				<img src="/src/img/github.png" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="20px" height="20px">
+			</a>
+			<div></div>
+			<span>csdn:</span>
+			<a class="mdui-btn mdui-btn-icon" href="https://blog.csdn.net/yyf525?spm=1000.2115.3001.5343" mdui-tooltip="{content:'csdn'}">
+				<img src="/src/img/csdn.webp" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="20px" height="20px">
+			</a>
+    </div>
+    <div class="mdui-bottom-nav mdui-bottom-nav-text-auto mdui-bottom-nav-scroll-hide mdui-color-black">
+      <a href="/" class="mdui-ripple mdui-ripple-white mdui-bottom-nav-active">
+        <i class="mdui-icon material-icons">&#xe88a;</i>
+        <label>Home</label>
+      </a>
+      <a href="/blogs" class="mdui-ripple mdui-ripple-white">
+        <i class="mdui-icon material-icons">&#xe02f;</i>
+        <label>Blog</label>
+      </a>
+      <a href="/solutions" class="mdui-ripple mdui-ripple-white">
+        <i class="mdui-icon material-icons">&#xe0e0;</i>
+        <label>Solution</label>
+      </a>
+      <a href="/files" class="mdui-ripple mdui-ripple-white">
+        <i class="mdui-icon material-icons">&#xe24d;</i>
+        <label>File</label>
+      </a>
+    </div>
+    <script src="https://cdn.w3cbus.com/library/mdui/1.0.2/js/mdui.min.js"></script>
+    <script src="/src/js/jquery.min.js"></script>
+    <script src="/src/js/bootstrap.min.js"></script>
+    <script src="/src/js/rendpage.js"></script>
+    <script src="/src/js/flower.js"></script>
+    <script>rendTypewriter();</script>
+  </body>
 </html>
