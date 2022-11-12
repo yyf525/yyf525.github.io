@@ -1,72 +1,77 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Home</title>
-    <link rel="stylesheet" href="https://cdn.w3cbus.com/library/mdui/1.0.2/css/mdui.min.css"/>
-    <link rel="stylesheet" href="/src/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/src/css/pagecss.css" />
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
+	<title>首页 - hashben's museum</title>
+	<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
 	<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
-  </head>
-  <body class="mdui-bottom-nav-fixed mdui-color-indigo-300">
-    <div id="main" class="mdui-typo">
-    	<h2>声明</h2>
-		    <span>此网站由</span>
-			<a href="https://github.com/wxuyuan">wxy</a>
-			<span>和</span>
-			<a href="https://www.mdui.org">mdui</a>
-			<span>提供主体代码，在此表示热烈感谢。</span>
-		<h2>联系方式</h2>
-			<span>洛谷(luogu):</span>
-			<a class="mdui-btn mdui-btn-icon" href="https://www.luogu.com.cn/user/541916" mdui-tooltip="{content:'luogu'}">
-				<img src="/src/img/luogu.ico" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="25px" height="20px">
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="tools.js"></script>
+</head>
+<body style="background: #EEE;">
+	<div class="mdui-appbar mdui-color-theme">
+		<div class="mdui-toolbar mdui-color-theme">
+			<a href="javascript:;" class="mdui-btn mdui-btn-icon">
+				<i class="mdui-icon material-icons">&#xe545;</i>
 			</a>
-			<div></div>
-			<span>Codeforces:</span>
-			<a class="mdui-btn mdui-btn-icon" href="http://codeforces.com/profile/yaoyanfeng" mdui-tooltip="{content:'CodeForces'}">
-				<img src="/src/img/codeforces.png" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="25px" height="20px">
+			<span><font size="5px" face="Consolas">Hashben Museum</font></span>
+			<div class="mdui-toolbar-spacer"></div>
+			<span class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#theme'}">
+				<i class="mdui-icon material-icons">&#xe40a;</i>
+			</span>
+			<a href="https://hexuben.github.io/busstop" class="mdui-btn mdui-btn-icon">
+				<i class="mdui-icon material-icons">&#xeb3c;</i>
 			</a>
-			<div></div>
-			<span>Email(163):</span>
-			<a class="mdui-btn mdui-btn-icon" href="mailto: yaoyanfeng1215@163.com" mdui-tooltip="{content:'Email'}">
-				<img src="/src/img/mail.jpg" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="25px" height="20px">
-			</a>
-			<div></div>
-			<span>Github:</span>
-			<a class="mdui-btn mdui-btn-icon" href="https://github.com/yyf525" mdui-tooltip="{content:'Github'}">
-				<img src="/src/img/github.png" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="25px" height="20px">
-			</a>
-			<div></div>
-			<span>csdn:</span>
-			<a class="mdui-btn mdui-btn-icon" href="https://blog.csdn.net/yyf525?spm=1000.2115.3001.5343" mdui-tooltip="{content:'csdn'}">
-				<img src="/src/img/csdn.webp" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="25px" height="20px">
-			</a>
-    </div>
-    <div class="mdui-bottom-nav mdui-bottom-nav-text-auto mdui-bottom-nav-scroll-hide mdui-color-black">
-      <a href="/" class="mdui-ripple mdui-ripple-white mdui-bottom-nav-active">
-        <i class="mdui-icon material-icons">&#xe88a;</i>
-        <label>Home</label>
-      </a>
-      <a href="/blogs" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe02f;</i>
-        <label>Blog</label>
-      </a>
-      <a href="/solutions" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe0e0;</i>
-        <label>Solution</label>
-      </a>
-      <a href="/files" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe24d;</i>
-        <label>File</label>
-      </a>
-    </div>
-    <script src="https://cdn.w3cbus.com/library/mdui/1.0.2/js/mdui.min.js"></script>
-    <script src="/src/js/jquery.min.js"></script>
-    <script src="/src/js/bootstrap.min.js"></script>
-    <script src="/src/js/rendpage.js"></script>
-    <script src="/src/js/flower.js"></script>
-    <script src="/src/js/type.js"></script>
-    <script>rendTypewriter();</script>
-  </body>
+		</div>
+		<div class="mdui-tab mdui-color-theme" mdui-tab>
+			<a href="#index" class="mdui-ripper mdui-ripper-white mdui-tab-active">主页</a>
+			<a href="#problem" class="mdui-ripper mdui-ripper-white">题库</a>
+			<a href="#blogs" class="mdui-ripper mdui-ripper-white">博客</a>
+		</div>
+	</div>
+	<div id="problem">
+		<br>
+		<div class="mdui-row" style="margin-right: 0;">
+			<div class="mdui-col-xs-12">
+				<div class="mdui-container mdui-shadow-2" style="background: #ffffffbb">
+					<br>
+					<center>
+						<div style="font-size: 32px; font-weight: 700;">
+							Hashben Problem
+						</div>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="blogs">
+		
+	</div>
+	<div class="mdui-dialog" id="theme">
+		<div class="mdui-dialog-title">Theme Settings</div>
+		<div class="mdui-dialog-content">
+			You can set theme here.<br><br>
+			<div class="mdui-chip mdui-color-red">
+				<a onclick="changeTheme('red');"><span class="mdui-chip-title">Red</span></a>
+			</div>
+			<div class="mdui-chip mdui-color-pink">
+				<a onclick="changeTheme('pink');"><span class="mdui-chip-title">Pink</span></a>
+			</div>
+			<div class="mdui-chip mdui-color-purple">
+				<a onclick="changeTheme('purple');"><span class="mdui-chip-title">Purple</span></a>
+			</div>
+			<div class="mdui-chip mdui-color-deep-purple">
+				<a onclick="changeTheme('deep-purple');"><span class="mdui-chip-title">Deep purple</span></a>
+			</div>
+			<div class="mdui-chip mdui-color-indigo">
+				<a onclick="changeTheme('indigo');"><span class="mdui-chip-title">Indigo</span></a>
+			</div>
+		</div>
+		<div class="mdui-dialog-actions">
+			<button class="mdui-btn mdui-ripple" mdui-dialog-close>cancel</button>
+			<button class="mdui-btn mdui-ripple" mdui-dialog-close>OK</button>
+		</div>
+	</div>
+</body>
 </html>
