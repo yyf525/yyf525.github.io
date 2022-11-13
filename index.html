@@ -1,153 +1,196 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Home</title>
-    <link rel="stylesheet" href="https://cdn.w3cbus.com/library/mdui/1.0.2/css/mdui.min.css"/>
-    <link rel="stylesheet" href="/src/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/src/css/pagecss.css" />
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
-  </head>
-  <body class="mdui-bottom-nav-fixed mdui-color-teal-50">
-    <div class="mdui-container">
-      <div class="mdui-toolbar mdui-color-blue-300 ">
-        <span class="mdui-typo-title">Title</span>
-        <div class="mdui-toolbar-spacer"></div>
-        <a href="/" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
-      </div>
-      <div class="mdui-appbar-fixed mdui-appbar mdui-color-cyan-300 mdui-hoverable">
-        <div class="toolbar mdui-toolbar">
-          <span class="mdui-typo-title" style="color: #fff;">My Home</span>
-          <div class="mdui-toolbar-spacer"></div>
-          <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target:'#WebDrawer',overlay:true,swipe:true}">
-            <i class="mdui-icon material-icons">&#xe1d8;</i>
-          </span>
-          <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target:'#FriendDrawer',overlay:true,swipe:true}">
-            <i class="mdui-icon material-icons">&#xe7fb;</i>
-          </span>
-          <a href="" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white">
-            <i class="mdui-icon material-icons">refresh</i>
-          </a>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Home</title>
+        <link rel="stylesheet" href="https://cdn.w3cbus.com/library/mdui/1.0.2/css/mdui.min.css"/>
+        <link rel="stylesheet" href="/src/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/src/css/pagecss.css" />
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
+    </head>
+    <body class="mdui-bottom-nav-fixed mdui-color-teal-50">
+        <div class="mdui-container">
+            <div class="mdui-toolbar mdui-color-blue-300 ">
+                <span class="mdui-typo-title">Title</span>
+                <div class="mdui-toolbar-spacer"></div>
+                <a href="/" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
+            </div>
+            <div class="mdui-appbar-fixed mdui-appbar mdui-color-cyan-300 mdui-hoverable">
+                <div class="toolbar mdui-toolbar">
+                    <span class="mdui-typo-title" style="color: #fff;">My Home</span>
+                    <div class="mdui-toolbar-spacer"></div>
+                    <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target:'#WebDrawer',overlay:true,swipe:true}">
+                        <i class="mdui-icon material-icons">&#xe1d8;</i>
+                    </span>
+                    <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target:'#FriendDrawer',overlay:true,swipe:true}">
+                        <i class="mdui-icon material-icons">&#xe7fb;</i>
+                    </span>
+                    <a href="" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white">
+                        <i class="mdui-icon material-icons">refresh</i>
+                    </a>
+                </div>
+            </div>
+            <div class="mdui-drawer mdui-drawer-close mdui-drawer-right" id="WebDrawer" style="background:rgb(52,152,219);color:cyan">
+                <li class="mdui-list">
+                    <a class="mdui-list-item mdui-ripple" href="https://github.com">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><font ><div style="font-weight:700;">Github</div></font></div>
+                    </a>
+                </li>
+                <li class="mdui-subheader">编程网站</li>
+                    <a class="mdui-list-item mdui-ripple" href="https://www.luogu.com.cn">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><font ><div style="font-weight:700;">luogu</div></font></div>
+                    </a>
+                    <a class="mdui-list-item mdui-ripple" href="https://www.codeforces.com">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><div style="font-weight:700;">CodeForces</div></div>
+                    </a>
+                    <a class="mdui-list-item mdui-ripple" href="https://www.atcoder.jp">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><div style="font-weight:700;">Atcoder</div></div>
+                    </a>
+                    <a class="mdui-list-item mdui-ripple" href="https://www.poj.org">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><div style="font-weight:700;">Poj</div></div>
+                    </a>
+                    <a class="mdui-list-item mdui-ripple" href="http://acm.hdu.edu.cn/">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><div style="font-weight:700;">杭科大OJ</div></div>
+                    </a>
+                    <a class="mdui-list-item mdui-ripple" href="https://vjudge.net">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><div style="font-weight:700;">Vjudge</div></div>
+                    </a>
+                    <a class="mdui-list-item mdui-ripple" href="https://www.mdui.org">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><div style="font-weight:700;">Mdui</div></div>
+                    </a>
+                </li>
+                <li class="mdui-subheader">工具网站</li>
+                    <a class="mdui-list-item mdui-ripple" href="https://www.hydro.ac">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><div style="font-weight:700;">Hydro</div></div>
+                    </a>
+                    <a class="mdui-list-item mdui-ripple" href="https://www.csdn.net">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><div style="font-weight:700;">csdn</div></div>
+                    </a>
+                    <a class="mdui-list-item mdui-ripple" href="https://www.oi-wiki.com">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><div style="font-weight:700;">OI-wiki</div></div>
+                    </a>
+                    <a class="mdui-list-item mdui-ripple" href="https://www.jetbrains.com/lp/mono/">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><div style="font-weight:700;">JetBrains Mono下载</div></div>
+                    </a>
+                    <a class="mdui-list-item mdui-ripple" href="https://www.mdui.org">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><div style="font-weight:700;">Mdui</div></div>
+                    </a>
+                </li>
+                <li class="mdui-subheader">Relax网站</li>
+                    <a class="mdui-list-item mdui-ripple" href="https://florr.io">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><div style="font-weight:700;">florr</div></div>
+                    </a>
+                    <a class="mdui-list-item mdui-ripple" href="https://slay.one">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><div style="font-weight:700;">Slay</div></div>
+                    </a>
+                    <a class="mdui-list-item mdui-ripple" href="https://generals.io">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><div style="font-weight:700;">Generals</div></div>
+                    </a>
+                </li>
+            </div>
+            <div class="mdui-drawer mdui-drawer-close mdui-drawer-right" id="FriendDrawer" style="background:rgb(52,152,219);color:lime">
+                <li class="mdui-list">
+                    <a class="mdui-list-item mdui-ripple" href="https://yyf525.github.io">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">home</i>
+                        <div class="mdui-list-item-content"><div style="font-weight:900;">yaoyanfeng</div></div>
+                    </a>
+                    <div class="mdui-divider mdui-m-y-0"></div>
+                    <a class="mdui-list-item mdui-ripple" href="https://hank0402.github.io">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><div style="font-weight:900;">hank0402</div></div>
+                    </a>
+                    <a class="mdui-list-item mdui-ripple" href="https://molmin.github.io">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><div style="font-weight:900;">milmon</div></div>
+                    </a>
+                    <a class="mdui-list-item mdui-ripple" href="https://hexuben.github.io">
+                        <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
+                        <div class="mdui-list-item-content"><div style="font-weight:900;">hexu2010</div></div>
+                    </a>
+                </li>
+            </div>
         </div>
-      </div>
-	  <div class="mdui-drawer mdui-drawer-close mdui-drawer-right" id="WebDrawer" style="background:rgb(52,152,219);color:white">
-        <ul class="mdui-list">
-          <a class="mdui-list-item mdui-ripple" href="https://github.com">
-            <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
-            <div class="mdui-list-item-content"><font ><div style="font-weight:700;">Github</div></font></div>
-          </a>
-		  <div class="mdui-divider mdui-m-y-0"></div>
-		  <li class="mdui-subheader">编程网站</li>
-          <a class="mdui-list-item mdui-ripple" href="https://www.luogu.com.cn">
-            <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
-            <div class="mdui-list-item-content"><font ><div style="font-weight:700;">luogu</div></font></div>
-          </a>
-          <a class="mdui-list-item mdui-ripple" href="https://www.codeforces.com">
-            <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
-            <div class="mdui-list-item-content"><div style="font-weight:700;">CodeForces</div></div>
-          </a>
-          <a class="mdui-list-item mdui-ripple" href="https://www.csdn.net">
-            <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
-            <div class="mdui-list-item-content"><div style="font-weight:700;">csdn</div></div>
-          </a>
-		  <a class="mdui-list-item mdui-ripple" href="https://www.mdui.org">
-            <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
-            <div class="mdui-list-item-content"><div style="font-weight:700;">Mdui</div></div>
-          </a>
-		  <li class="mdui-subheader">Relax网站</li>
-          <a class="mdui-list-item mdui-ripple" href="https://florr.io">
-            <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
-            <div class="mdui-list-item-content"><div style="font-weight:700;">florr</div></div>
-          </a>
-		  <a class="mdui-list-item mdui-ripple" href="https://slay.one">
-            <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
-            <div class="mdui-list-item-content"><div style="font-weight:700;">Slay</div></div>
-          </a>
-        </ul>
-      </div>
-      <div class="mdui-drawer mdui-drawer-close mdui-drawer-right" id="FriendDrawer" style="background:rgb(52,152,219);color:white">
-        <ul class="mdui-list">
-          <a class="mdui-list-item mdui-ripple" href="https://yyf525.github.io">
-            <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">home</i>
-            <div class="mdui-list-item-content"><font >yaoyanfeng</font></div>
-          </a>
-          <div class="mdui-divider mdui-m-y-0"></div>
-          <a class="mdui-list-item mdui-ripple" href="https://hank0402.github.io">
-            <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
-            <div class="mdui-list-item-content">hank0402</div>
-          </a>
-          <a class="mdui-list-item mdui-ripple" href="https://molmin.github.io">
-            <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
-            <div class="mdui-list-item-content">milmon</div>
-          </a>
-          <a class="mdui-list-item mdui-ripple" href="https://hexuben.github.io">
-            <i class="mdui-list-item-icon mdui-icon material-icons" style="color:#fff;">&#xe5cc;</i>
-            <div class="mdui-list-item-content">hexu2010</div>
-          </a>
-        </ul>
-      </div>
-    </div>
-    <div style="padding: 10px;" id="main" class="mdui-typo">
-      <h2>声明</h2>
-	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <span>此网站由</span>
-      <a href="https://github.com/wxuyuan">wxy</a>
-      <span>和</span>
-      <a href="https://www.mdui.org">mdui</a>
-      <span>提供主体代码，在此表示热烈感谢。</span>
-      <h2>联系方式</h2>
-	  <ul> 
-      <span>洛谷(luogu):</span>
-      <a class="mdui-btn mdui-btn-icon" href="https://www.luogu.com.cn/user/541916" mdui-tooltip="{content:'luogu'}">
-        <img src="/src/img/luogu.ico" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="20px" height="20px">
-      </a>
-      <div></div>
-      <span>Codeforces:</span>
-      <a class="mdui-btn mdui-btn-icon" href="http://codeforces.com/profile/yaoyanfeng" mdui-tooltip="{content:'CodeForces'}">
-        <img src="/src/img/codeforces.png" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="20px" height="20px">
-      </a>
-      <div></div>
-      <span>Email(163):</span>
-      <a class="mdui-btn mdui-btn-icon" href="mailto: yaoyanfeng1215@163.com" mdui-tooltip="{content:'Email'}">
-        <img src="/src/img/mail.jpg" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="20px" height="20px">
-      </a>
-      <div></div>
-      <span>Github:</span>
-      <a class="mdui-btn mdui-btn-icon" href="https://github.com/yyf525" mdui-tooltip="{content:'Github'}">
-        <img src="/src/img/github.png" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="25px" height="20px">
-      </a>
-      <div></div>
-      <span>csdn:</span>
-      <a class="mdui-btn mdui-btn-icon" href="https://blog.csdn.net/yyf525?spm=1000.2115.3001.5343" mdui-tooltip="{content:'csdn'}">
-        <img src="/src/img/csdn.webp" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="20px" height="20px">
-      </a>
-	  </ul>
-    </div>
-    <div class="mdui-bottom-nav mdui-bottom-nav-text-auto mdui-bottom-nav-scroll-hide mdui-color-grey-700">
-      <a href="/" class="mdui-ripple mdui-ripple-white mdui-bottom-nav-active">
-        <i class="mdui-icon material-icons">&#xe88a;</i>
-        <label>Home</label>
-      </a>
-      <a href="/blogs" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe02f;</i>
-        <label>Blog</label>
-      </a>
-      <a href="/solutions" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe0e0;</i>
-        <label>Solution</label>
-      </a>
-      <a href="/files" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe24d;</i>
-        <label>File</label>
-      </a>
-    </div>
-    <script src="https://cdn.w3cbus.com/library/mdui/1.0.2/js/mdui.min.js"></script>
-	<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
-    <script src="/src/js/jquery.min.js"></script>
-    <script src="/src/js/bootstrap.min.js"></script>
-    <script src="/src/js/rendpage.js"></script>
-    <script src="/src/js/flower.js"></script>
-    <script>rendTypewriter();</script>
-  </body>
+        <div style="padding: 10px;" id="main" class="mdui-typo">
+            <h2>声明</h2>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span>此网站由</span>
+            <a href="https://github.com/wxuyuan">wxy</a>
+            <span>和</span>
+            <a href="https://www.mdui.org">mdui</a>
+            <span>提供主体代码，在此表示热烈感谢。</span>
+            <h2>联系方式</h2>
+            <ul>
+                <span>洛谷(luogu):</span>
+                <a class="mdui-btn mdui-btn-icon" href="https://www.luogu.com.cn/user/541916" mdui-tooltip="{content:'luogu'}">
+                    <img src="/src/img/luogu.ico" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="20px" height="20px">
+                </a>
+                <div></div>
+                <span>Codeforces:</span>
+                <a class="mdui-btn mdui-btn-icon" href="http://codeforces.com/profile/yaoyanfeng" mdui-tooltip="{content:'CodeForces'}">
+                    <img src="/src/img/codeforces.png" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="20px" height="20px">
+                </a>
+                <div></div>
+                <span>Email(163):</span>
+                <a class="mdui-btn mdui-btn-icon" href="mailto: yaoyanfeng1215@163.com" mdui-tooltip="{content:'Email'}">
+                    <img src="/src/img/mail.jpg" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="20px" height="20px">
+                </a>
+                <div></div>
+                <span>Github:</span>
+                <a class="mdui-btn mdui-btn-icon" href="https://github.com/yyf525" mdui-tooltip="{content:'Github'}">
+                    <img src="/src/img/github.png" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="25px" height="20px">
+                </a>
+                <div></div>
+                <span>csdn:</span>
+                <a class="mdui-btn mdui-btn-icon" href="https://blog.csdn.net/yyf525?spm=1000.2115.3001.5343" mdui-tooltip="{content:'csdn'}">
+                    <img src="/src/img/csdn.webp" class="mdui-img-circle" style="margin:7px 0px 0px 0px;" width="20px" height="20px">
+                </a>
+            </ul>
+        </div>
+        <div class="mdui-bottom-nav mdui-bottom-nav-text-auto mdui-bottom-nav-scroll-hide mdui-color-grey-700">
+            <a href="/" class="mdui-ripple mdui-ripple-white mdui-bottom-nav-active">
+                <i class="mdui-icon material-icons">&#xe88a;</i>
+                <label>Home</label>
+            </a>
+            <a href="/blogs" class="mdui-ripple mdui-ripple-white">
+                <i class="mdui-icon material-icons">&#xe02f;</i>
+                <label>Blog</label>
+            </a>
+            <a href="/solutions" class="mdui-ripple mdui-ripple-white">
+                <i class="mdui-icon material-icons">&#xe0e0;</i>
+                <label>Solution</label>
+            </a>
+            <a href="/files" class="mdui-ripple mdui-ripple-white">
+                <i class="mdui-icon material-icons">&#xe24d;</i>
+                <label>File</label>
+            </a>
+            <a href="/solutions" class="mdui-ripple mdui-ripple -white">
+                <i class="mdui-icon material-icons">&#xe36d;</i>
+                <label>Settings</label>
+            </a>
+        </div>
+        <script src="https://cdn.w3cbus.com/library/mdui/1.0.2/js/mdui.min.js"></script>
+        <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+        <script src="/src/js/jquery.min.js"></script>
+        <script src="/src/js/bootstrap.min.js"></script>
+        <script src="/src/js/rendpage.js"></script>
+        <script src="/src/js/flower.js"></script>
+        <script>rendTypewriter();</script>
+    </body>
 </html>
