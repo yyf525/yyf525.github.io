@@ -111,7 +111,7 @@ function rendBlogs(ini) {
   for (let blogId in ini.blogs) {
     let blog = ini.blogs[blogId];
     $(".blogs-table tbody").each(function() {
-      let str = "<tr><td><button class=\"btn btn-small\" onclick=\"location.href='/blog/?id=" + blogId + "'\">" + blog.title + "</button></td><td>";
+      let str = "<tr><td>" + blogId + "</td><td><button class=\"btn btn-small\" onclick=\"location.href='/blog/?id=" + blogId + "'\">" + blog.title + "</button></td><td>";
       for (id in blog.tags) {
         str = str + "<kbd>" + blog.tags[id] + "</kbd>&nbsp;";
       }
