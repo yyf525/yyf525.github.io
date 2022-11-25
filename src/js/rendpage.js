@@ -171,7 +171,7 @@ function rendSolutions(ini) {
   for (let solutionId in ini.solutions) {
     let solution = ini.solutions[solutionId];
     $(".solutions-table tbody").each(function() {
-      let str = "<tr><td><button class=\"btn btn-small\" onclick=\"location.href='/solution/?id=" + solutionId + "'\">" + solution.title + "</button></td><td>";
+      let str = "<tr><td>" + solutionId + "</td><td><button class=\"btn btn-small\" onclick=\"location.href='/solution/?id=" + solutionId + "'\">" + solution.title + "</button></td><td>";
       for (id in solution.tags) {
         str = str + "<kbd>" + solution.tags[id] + "</kbd>&nbsp;";
       }
